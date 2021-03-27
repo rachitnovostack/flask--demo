@@ -6,15 +6,13 @@ import datetime
 
 
 # importing all the blue prints
-from .Justo.routes import justo_webhook as justo
 from .sales.routes import sales
 from .backend.routes import backend
 from .admin.routes import admin
 from .login.routes import login
 from .super_admin.routes import super_admin
 
-from .goomer.routes import goomer_webhook as goomer
-from .Easi.routes import easi_webhook as easi
+
 # from .models import user
 
 # from flask_login import UserMixin
@@ -35,14 +33,13 @@ def create_app():
     
     
     # registering all the blueprints
-    app.register_blueprint(justo)
-    app.register_blueprint(goomer)
+    
     app.register_blueprint(sales)
     app.register_blueprint(backend)
     app.register_blueprint(admin)
     app.register_blueprint(super_admin)
     app.register_blueprint(login)
-    app.register_blueprint(easi)
+    
 
     @app.route('/')
     def login_page():
