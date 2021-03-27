@@ -7,7 +7,7 @@ import datetime
 
 # importing all the blue prints
 from .sales.routes import sales
-from .backend.routes import backend
+
 from .admin.routes import admin
 from .login.routes import login
 from .super_admin.routes import super_admin
@@ -35,7 +35,7 @@ def create_app():
     # registering all the blueprints
     
     app.register_blueprint(sales)
-    app.register_blueprint(backend)
+
     app.register_blueprint(admin)
     app.register_blueprint(super_admin)
     app.register_blueprint(login)
